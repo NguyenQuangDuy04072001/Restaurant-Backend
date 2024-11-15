@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Restaurant\BusinessType;
+use App\Http\Controllers\AddressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,8 @@ Route::post("/login", [AuthController::class ,'login']);
 Route::post("/register", [AuthController::class ,'register']);
 
 Route::get("/business_type", [BusinessType::class , 'businessType']);
+
+
+Route::get("/city", [AddressController::class , 'city']);
+Route::get("/district", [AddressController::class , 'district']);
+Route::get("/wards", [AddressController::class , 'wards']);
